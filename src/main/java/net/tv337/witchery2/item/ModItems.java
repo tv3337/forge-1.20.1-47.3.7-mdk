@@ -43,6 +43,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DEMON_HEART = ITEMS.register("demon_heart",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BREATH_OF_THE_GODDESS = ITEMS.register("breath_of_the_goddess",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOVEN_CRUOR = ITEMS.register("woven_cruor",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CREEPER_HEART = ITEMS.register("creeper_heart",

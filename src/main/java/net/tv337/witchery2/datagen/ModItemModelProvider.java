@@ -19,7 +19,21 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.ANOINTING_PASTE);
-
+        simpleItem(ModItems.ARMOR_PROTECTION_POPPET);
+        simpleItem(ModItems.ARTICHOKE_BULB);
+        simpleItem(ModItems.ATTUNED_STONE);
+        simpleItem(ModItems.ATTUNED_STONE_CHARGED);
+        simpleItem(ModItems.BALL_OF_BATS);
+        simpleItem(ModItems.BELLADONNA_FLOWER);
+        simpleItem(ModItems.BELLADONNA_SEEDS);
+        simpleItem(ModItems.BIOME_NOTE);
+        simpleItem(ModItems.BONE_NEEDLE);
+        simpleItem(ModItems.BREATH_OF_THE_GODDESS);
+        simpleItem(ModItems.CHARM_OF_FANCIFUL_THINKING);
+        simpleItem(ModItems.CIRCLE_TALISMAN_EMPTY);
+        simpleItem(ModItems.CLAY_JAR);
+        simpleItem(ModItems.CLAY_JAR_UNFIRED);
+        simpleItem(ModItems.COOKED_LAMB);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
