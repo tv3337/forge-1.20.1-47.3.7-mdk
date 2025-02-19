@@ -11,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tv337.witchery2.Witchery;
-import net.tv337.witchery2.block.custom.grassper_block;
+import net.tv337.witchery2.block.custom.grassper;
 import net.tv337.witchery2.item.ModItems;
 
 import java.util.function.Supplier;
@@ -26,8 +26,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).sound(SoundType.AMETHYST)));
     //Tutorial Blocks
 
-    public static final RegistryObject<Block> GRASSPER_BLOCK = registerBlock("grassper_block",
-            () -> new grassper_block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> GRASSPER = registerBlock("grassper",
+            () -> new grassper(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion()));
 
 
 

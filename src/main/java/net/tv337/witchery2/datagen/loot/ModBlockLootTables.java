@@ -26,7 +26,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
-        this.dropSelf(ModBlocks.GRASSPER_BLOCK.get());
+        this.dropSelf(ModBlocks.GRASSPER.get());
 
 
         this.add(ModBlocks.SAPPHIRE_BLOCK.get(),

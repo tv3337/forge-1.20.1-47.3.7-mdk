@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class grassper_block extends Block {
+public class grassper extends Block {
     public static final VoxelShape SHAPE = Block.box(0, 0,0, 16, 16, 16);
 
     @Override
@@ -21,7 +21,7 @@ public class grassper_block extends Block {
         return RenderShape.MODEL;
     }
 
-    public grassper_block(Properties pProperties) {
+    public grassper(Properties pProperties) {
         super(pProperties);
     }
 }

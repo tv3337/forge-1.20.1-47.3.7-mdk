@@ -18,8 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
         blockWithItem(ModBlocks.RAW_SAPPHIRE_BLOCK);
-        simpleBlock(ModBlocks.GRASSPER_BLOCK.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/grassper_final")));
+        simpleBlock(ModBlocks.GRASSPER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/grassper")));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
