@@ -60,6 +60,7 @@ public class ModItems {
     public static final RegistryObject<Item> CONDENSED_FEAR = ITEMS.register("condensed_fear",
             () -> new Item(new Item.Properties()));
 
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

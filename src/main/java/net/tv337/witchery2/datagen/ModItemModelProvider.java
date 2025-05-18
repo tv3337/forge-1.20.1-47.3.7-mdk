@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CLAY_JAR);
         simpleItem(ModItems.CLAY_JAR_UNFIRED);
         simpleItem(ModItems.COOKED_LAMB);
+        simpleItem(ModItems.DEMON_HEART);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
