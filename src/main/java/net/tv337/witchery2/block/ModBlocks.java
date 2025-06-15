@@ -27,7 +27,10 @@ public class ModBlocks {
     //Tutorial Blocks
 
     public static final RegistryObject<Block> GRASSPER = registerBlock("grassper",
-            () -> new grassper(BlockBehaviour.Properties.copy(Blocks.GRASS).noOcclusion()));
+            () -> new grassper(BlockBehaviour.Properties.copy(Blocks.DIRT)
+                    .noOcclusion()
+                    .instabreak()
+                    .sound(SoundType.GRASS)));
 
 
 
