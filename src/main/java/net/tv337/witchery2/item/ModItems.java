@@ -1,11 +1,10 @@
 package net.tv337.witchery2.item;
-
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.tv337.witchery2.Witchery;
+import net.tv337.witchery2.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =

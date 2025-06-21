@@ -15,8 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tv337.witchery2.block.ModBlocks;
-import net.tv337.witchery2.item.ModCreativeModeTabs;
-import net.tv337.witchery2.item.ModItems;
+import net.tv337.witchery2.item.*;
 import org.slf4j.Logger;
 
 
