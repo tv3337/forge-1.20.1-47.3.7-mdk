@@ -1,10 +1,12 @@
-// 1.20.1	2025-02-18T22:07:46.0023997	Recipes
+// 1.20.1	2025-08-29T09:53:22.4730847	Recipes
+ead70010dcd5e04e33deeb06fa142bb4a5d5bb99 data/witchery2/advancements/recipes/building_blocks/clay_jar.json
 219f2822b7aba934c0ff68ba52138abb2068c1dc data/witchery2/advancements/recipes/misc/sapphire.json
 eb6c066ce315e26497595768c2cc9160d3845f12 data/witchery2/advancements/recipes/misc/sapphire_block.json
 62a13c908d4f7fe349763845db8d44be629998b4 data/witchery2/advancements/recipes/misc/sapphire_from_blasting_raw_sapphire.json
 d05bcf3c7a45cb0880d4fab2976c6bfd9737511f data/witchery2/advancements/recipes/misc/sapphire_from_blasting_raw_sapphire_block.json
 1de9766993dbd6e6a8a63658a97ad7c67b966180 data/witchery2/advancements/recipes/misc/sapphire_from_smelting_raw_sapphire.json
 c32d21d8be1ba242f0bc495aa91e60d10138343e data/witchery2/advancements/recipes/misc/sapphire_from_smelting_raw_sapphire_block.json
+c5067177f41363fbffbbd5c35b70d07d3d45bad9 data/witchery2/recipes/clay_jar.json
 db62070ed27d8b7536047d916683bebc1036ff99 data/witchery2/recipes/sapphire.json
 e630cfb71ade0c2a7f79d2144ea4c4e4631e199d data/witchery2/recipes/sapphire_block.json
 fe4dc90de9c430dc3422d74065a0d7214432bde3 data/witchery2/recipes/sapphire_from_blasting_raw_sapphire.json
