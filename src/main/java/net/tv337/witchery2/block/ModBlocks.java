@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tv337.witchery2.Witchery;
 import net.tv337.witchery2.block.custom.grassper;
+import net.tv337.witchery2.block.custom.witch_cauldron;
 import net.tv337.witchery2.item.ModItems;
 
 import java.util.function.Supplier;
@@ -28,9 +29,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GRASSPER = registerBlock("grassper",
             () -> new grassper(BlockBehaviour.Properties.copy(Blocks.DIRT)
-                    .noOcclusion()
+                    .noCollission()
                     .instabreak()
                     .sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> WITCH_CAULDRON = registerBlock("witch_cauldron",
+            () -> new witch_cauldron(BlockBehaviour.Properties.copy((Blocks.CAULDRON))));
 
 
 
