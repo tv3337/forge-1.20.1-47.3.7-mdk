@@ -1,7 +1,8 @@
 {
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "witchery2:block/witch_cauldron"
+		"0": "witchery2:block/witch_cauldron",
+		"particle": "witchery2:block/grassper_particle"
 	},
 	"elements": [
 		{
