@@ -1,9 +1,11 @@
-// 1.20.1	2025-02-19T10:10:21.560342	Block States: witchery2
+// 1.20.1	2025-08-29T07:33:26.9102916	Block States: witchery2
 bf0d246820e41940d4fa56d90ba1bc181019757d assets/witchery2/blockstates/grassper.json
 4922b511b236f7b6e16dc047b95e34a3c7439d7d assets/witchery2/blockstates/raw_sapphire_block.json
 49039943618e4d90e511ff62c0ded3581a2c18c5 assets/witchery2/blockstates/sapphire_block.json
+722a1e02e654ce49b3f687342f6db6749341467a assets/witchery2/blockstates/witch_cauldron.json
 64d5730f14227ab72ba3c27ffdbba698676affae assets/witchery2/models/block/raw_sapphire_block.json
 ca1deea78dfbb865eedf3b39ff632d8a12147b28 assets/witchery2/models/block/sapphire_block.json
 29efb3df45fd9d64c13b3a6794bcfc633d9331e0 assets/witchery2/models/item/grassper.json
 d8e905b73b27544719495b0010ad931c2084f471 assets/witchery2/models/item/raw_sapphire_block.json
 3ad0bde8385fb96f5d8c0bb8a01b00ac80ea190d assets/witchery2/models/item/sapphire_block.json
+ac62e001614f7246e082c5377e6f61c7d946d69d assets/witchery2/models/item/witch_cauldron.json
