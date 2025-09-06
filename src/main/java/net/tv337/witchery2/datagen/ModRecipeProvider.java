@@ -15,8 +15,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get(),
-            ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+    private static final List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -38,10 +37,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.SAPPHIRE.get())
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_SAPPHIRE_BLOCK.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.RAW_SAPPHIRE.get())
+                .unlockedBy(getHasName(ModItems.RAW_SAPPHIRE.get()), has(ModItems.RAW_SAPPHIRE.get()))
+                .save(consumer);
         //shapeless Recipe
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 9)
                 .requires(ModBlocks.SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 9)
+                .requires(ModBlocks.RAW_SAPPHIRE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_SAPPHIRE_BLOCK.get()), has(ModBlocks.RAW_SAPPHIRE_BLOCK.get()))
                 .save(consumer);
     }
 

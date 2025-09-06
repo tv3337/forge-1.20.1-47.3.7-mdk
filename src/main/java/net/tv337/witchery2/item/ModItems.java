@@ -5,6 +5,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tv337.witchery2.*;
+import net.tv337.witchery2.item.custom.attuned_stone_charged;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -29,7 +30,7 @@ public class ModItems {
     public static final RegistryObject<Item> ATTUNED_STONE = ITEMS.register("attuned_stone",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ATTUNED_STONE_CHARGED = ITEMS.register("attuned_stone_charged",
-            () -> new Item(new Item.Properties()));
+            () -> new attuned_stone_charged(new Item.Properties()));
     public static final RegistryObject<Item> BALL_OF_BATS = ITEMS.register("ball_of_bats",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BONE_NEEDLE = ITEMS.register("bone_needle",

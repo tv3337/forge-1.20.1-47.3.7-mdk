@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tv337.witchery2.block.ModBlocks;
+import net.tv337.witchery2.effect.ModEffects;
 import net.tv337.witchery2.item.*;
 import org.slf4j.Logger;
 
@@ -39,6 +40,7 @@ public class Witchery{
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -60,7 +62,6 @@ public class Witchery{
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.RAW_SAPPHIRE);
             event.accept(ModItems.ANOINTING_PASTE);
             event.accept(ModItems.WORMY_APPLE);
@@ -76,6 +77,7 @@ public class Witchery{
             event.accept(ModItems.DEMON_HEART);
             event.accept(ModItems.CONDENSED_FEAR);
             event.accept(ModItems.CREEPER_HEART);
+            event.accept(ModItems.BROOMSTICK);
             event.accept(ModItems.WOVEN_CRUOR);
             event.accept(ModItems.CIRCLE_TALISMAN_EMPTY);
         }

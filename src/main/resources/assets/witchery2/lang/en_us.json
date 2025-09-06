@@ -29,6 +29,8 @@
   "item.witchery2.cooked_lamb": "Cooked Lamb",
   "item.witchery2.charm_of_fanciful_thinking": "Charm of Fanciful Thinking",
   "item.witchery2.breath_of_the_goddess": "Breath of the Goddess",
-  "item.witchery2.broomstick": "Broomstick"
+  "item.witchery2.broomstick": "Broomstick",
+
+  "effect.witchery2.gruesPrey": "Grues Prey"
 
 }
