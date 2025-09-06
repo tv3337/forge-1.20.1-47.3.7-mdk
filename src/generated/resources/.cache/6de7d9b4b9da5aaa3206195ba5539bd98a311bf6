@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-12T20:21:34.6409366	Item Models: witchery2
+// 1.20.1	2025-09-06T09:49:19.2526416	Item Models: witchery2
 365e468621f9f5b96edbc0ec20d4a72bc17865e2 assets/witchery2/models/item/anointing_paste.json
 86643deb8abf92879a0d55f3db35931e64be6234 assets/witchery2/models/item/armor_protection_poppet.json
 5a56d09c6a3e428776106c0c08d7458a24061689 assets/witchery2/models/item/artichoke_bulb.json
@@ -16,4 +16,5 @@ ddc477e24e171cab565f9392da0276079f8af16d assets/witchery2/models/item/biome_note
 01e3bf93002d5861503b638a0815fc27ce6bf380 assets/witchery2/models/item/clay_jar_unfired.json
 10ea74ed30d5311187a61945b1493d4b47d1822d assets/witchery2/models/item/cooked_lamb.json
 3efd903f7538fdcaa429701cbb1226fe0dd6712d assets/witchery2/models/item/demon_heart.json
+a2414d2d758e8cbb469e11d031cec328e903d50d assets/witchery2/models/item/raw_sapphire.json
 8ad574f6d542b3ecb8c35b65054c267ceb239c03 assets/witchery2/models/item/sapphire.json
