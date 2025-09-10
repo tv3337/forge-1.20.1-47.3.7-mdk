@@ -7,9 +7,10 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 
 public class witch_cauldron extends Block {
-    public static final VoxelShape SHAPE = Block.box(1, 0,1, 14, 13, 14);
+    public static final VoxelShape SHAPE = Block.box(1, 0,1, 15, 13, 15);
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {

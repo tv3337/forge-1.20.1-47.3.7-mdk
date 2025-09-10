@@ -15,8 +15,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tv337.witchery2.block.ModBlocks;
+import net.tv337.witchery2.block.entity.ModBlockEntities;
 import net.tv337.witchery2.effect.ModEffects;
-import net.tv337.witchery2.item.*;
+import net.tv337.witchery2.item.ModItems;
 import org.slf4j.Logger;
 
 
@@ -41,6 +42,7 @@ public class Witchery{
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
