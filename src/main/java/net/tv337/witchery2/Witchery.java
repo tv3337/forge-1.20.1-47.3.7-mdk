@@ -1,6 +1,7 @@
 package net.tv337.witchery2;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tv337.witchery2.block.ModBlocks;
 import net.tv337.witchery2.block.entity.ModBlockEntities;
 import net.tv337.witchery2.effect.ModEffects;
+import net.tv337.witchery2.item.ModCreativeModeTabs;
 import net.tv337.witchery2.item.ModItems;
 import org.slf4j.Logger;
 
@@ -34,6 +36,11 @@ import org.slf4j.Logger;
 public class Witchery{
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "witchery2";
+
+    public static ResourceLocation res(String path) {
+        return new ResourceLocation(MOD_ID, path);
+    }
+
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public Witchery(){

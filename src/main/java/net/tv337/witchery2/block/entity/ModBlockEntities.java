@@ -16,7 +16,7 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<witch_cauldron>> WITCH_CAULDRON =
             BLOCK_ENTITIES.register("witch_cauldron", () ->
                     BlockEntityType.Builder.of(witch_cauldron::new,
-                            ModBlocks.witch_cauldron.get()).build(null));
+                            ModBlocks.WITCH_CAULDRON.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
