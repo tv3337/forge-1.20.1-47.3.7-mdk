@@ -57,7 +57,7 @@ public class witch_cauldron extends Block implements EntityBlock {
 
         private final String name;
 
-        private CauldronWaterColor(String name) {
+        CauldronWaterColor(String name) {
             this.name = name;
         }
 
