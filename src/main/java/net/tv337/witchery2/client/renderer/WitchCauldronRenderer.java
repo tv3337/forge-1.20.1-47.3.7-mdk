@@ -10,20 +10,19 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.tv337.witchery2.block.custom.witch_cauldron;
-import net.tv337.witchery2.block.entity.witch_cauldron_be;
+import net.tv337.witchery2.block.custom.WitchCauldron;
+import net.tv337.witchery2.block.entity.WitchCauldronBe;
 
 
-public class WitchCauldronRenderer implements BlockEntityRenderer <witch_cauldron_be> {
+public class WitchCauldronRenderer implements BlockEntityRenderer<WitchCauldronBe> {
     public static final ResourceLocation WATER_STILL = new ResourceLocation("minecraft:block/water_still");
 
     @Override
-    public void render(witch_cauldron_be pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pLight, int pOverlay) {
+    public void render(WitchCauldronBe pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pLight, int pOverlay) {
 
         BlockState state = pBlockEntity.getBlockState();
-        int level = state.getValue(witch_cauldron.LEVEL);
-        String cauldronWaterColor = state.getValue(witch_cauldron.WATER_COLOR).toString();
+        int level = state.getValue(WitchCauldron.LEVEL);
+        String cauldronWaterColor = state.getValue(WitchCauldron.WATER_COLOR).toString();
 
         if (level == 0) {
             return;
@@ -86,7 +85,7 @@ public class WitchCauldronRenderer implements BlockEntityRenderer <witch_cauldro
     }
 
     @Override
-    public boolean shouldRenderOffScreen(witch_cauldron_be pBlockEntity) {
+    public boolean shouldRenderOffScreen(WitchCauldronBe pBlockEntity) {
         return true;
     }
 }

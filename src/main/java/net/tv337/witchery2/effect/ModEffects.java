@@ -15,7 +15,7 @@ public class ModEffects {
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Witchery.MOD_ID);
 
     public static final RegistryObject <MobEffect> GRUES_PREY = MOB_EFFECTS.register("gruesprey",
-            () -> new gruesprey(MobEffectCategory.NEUTRAL, 0x333333).addAttributeModifier(Attributes.MOVEMENT_SPEED,
+            () -> new GruesPrey(MobEffectCategory.NEUTRAL, 0x333333).addAttributeModifier(Attributes.MOVEMENT_SPEED,
                     "7107DE5E-7CE8-4030-948E-514C1F160890", -.25F, AttributeModifier.Operation.MULTIPLY_TOTAL))  ;
 
     public static void register (IEventBus eventBus) {

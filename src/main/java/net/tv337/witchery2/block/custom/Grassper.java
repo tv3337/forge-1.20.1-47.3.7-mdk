@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class grassper extends Block {
+public class Grassper extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final VoxelShape SHAPE = Block.box(0, 0,0, 16, 16, 16);
 
@@ -49,7 +49,7 @@ public class grassper extends Block {
         return RenderShape.MODEL;
     }
 
-    public grassper(Properties pProperties) {
+    public Grassper(Properties pProperties) {
         super(pProperties);
     }
 }

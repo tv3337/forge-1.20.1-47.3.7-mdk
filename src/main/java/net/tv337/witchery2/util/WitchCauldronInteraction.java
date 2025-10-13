@@ -21,7 +21,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.tv337.witchery2.block.ModBlocks;
-import net.tv337.witchery2.block.custom.witch_cauldron;
+import net.tv337.witchery2.block.custom.WitchCauldron;
 
 import java.util.Map;
 import java.util.function.Predicate;
@@ -32,7 +32,7 @@ public interface WitchCauldronInteraction {
 
     WitchCauldronInteraction FILL_WATER = (state, level, pos, player, hand, stack) -> {
         return emptyBucket(level, pos, player, hand, stack, ModBlocks.WITCH_CAULDRON.get().defaultBlockState()
-                .setValue(witch_cauldron.LEVEL, Integer.valueOf(3)), SoundEvents.BUCKET_EMPTY);
+                .setValue(WitchCauldron.LEVEL, Integer.valueOf(3)), SoundEvents.BUCKET_EMPTY);
     };
 
     static Object2ObjectOpenHashMap<Item, WitchCauldronInteraction> newInteractionMap() {
@@ -63,7 +63,7 @@ public interface WitchCauldronInteraction {
                             ItemUtils.createFilledResult(stack, player, new ItemStack(Items.GLASS_BOTTLE)));
                     player.awardStat(Stats.ITEM_USED.get(item));
                     level.setBlockAndUpdate(pos,
-                            ModBlocks.WITCH_CAULDRON.get().defaultBlockState().cycle(witch_cauldron.LEVEL));
+                            ModBlocks.WITCH_CAULDRON.get().defaultBlockState().cycle(WitchCauldron.LEVEL));
                     level.playSound((Player) null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
                     level.gameEvent((Entity) null, GameEvent.FLUID_PLACE, pos);
                 }
@@ -73,7 +73,7 @@ public interface WitchCauldronInteraction {
         addDefaultInteractions(WATER);
         WATER.put(Items.BUCKET, (state, level, pos, player, hand, stack) -> {
             return fillBucket(state, level, pos, player, hand, stack, new ItemStack(Items.WATER_BUCKET),
-                    blockstate -> blockstate.getValue(witch_cauldron.LEVEL) == 3, SoundEvents.BUCKET_FILL);
+                    blockstate -> blockstate.getValue(WitchCauldron.LEVEL) == 3, SoundEvents.BUCKET_FILL);
         });
         WATER.put(Items.GLASS_BOTTLE, (state, level, pos, player, hand, stack) -> {
             if (!level.isClientSide) {
@@ -87,12 +87,12 @@ public interface WitchCauldronInteraction {
             return InteractionResult.sidedSuccess(level.isClientSide);
         });
         WATER.put(Items.POTION, (state, level, pos, player, hand, stack) -> {
-            if (state.getValue(witch_cauldron.LEVEL) != 3 && PotionUtils.getPotion(stack) == Potions.WATER) {
+            if (state.getValue(WitchCauldron.LEVEL) != 3 && PotionUtils.getPotion(stack) == Potions.WATER) {
                 if (!level.isClientSide) {
                     player.setItemInHand(hand,
                             ItemUtils.createFilledResult(stack, player, new ItemStack(Items.GLASS_BOTTLE)));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
-                    level.setBlockAndUpdate(pos, state.cycle(witch_cauldron.LEVEL));
+                    level.setBlockAndUpdate(pos, state.cycle(WitchCauldron.LEVEL));
                     level.playSound((Player) null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
                     level.gameEvent((Entity) null, GameEvent.FLUID_PLACE, pos);
                 }

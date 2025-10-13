@@ -32,7 +32,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.tv337.witchery2.block.ModBlocks;
-import net.tv337.witchery2.block.entity.witch_cauldron_be;
+import net.tv337.witchery2.block.entity.WitchCauldronBe;
 import net.tv337.witchery2.util.ITickableBlockEntity;
 import net.tv337.witchery2.util.WitchCauldronInteraction;
 import com.google.common.base.Predicate;
@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 
 
-public class witch_cauldron extends Block implements EntityBlock {
+public class WitchCauldron extends Block implements EntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final VoxelShape SHAPE = Block.box(1, 0,1, 15, 13, 15);
     public static final IntegerProperty LEVEL = IntegerProperty.create("level", 0, 3);
@@ -72,7 +72,7 @@ public class witch_cauldron extends Block implements EntityBlock {
         }
     }
 
-    public witch_cauldron(Properties pProperties) {
+    public WitchCauldron(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(BUBBLING, Boolean.valueOf(false))
                 .setValue(LEVEL, Integer.valueOf(0)).setValue(WATER_COLOR, CauldronWaterColor.DEFAULT));
@@ -234,7 +234,7 @@ public class witch_cauldron extends Block implements EntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new witch_cauldron_be(pPos,pState);
+        return new WitchCauldronBe(pPos,pState);
     }
 
     @Override

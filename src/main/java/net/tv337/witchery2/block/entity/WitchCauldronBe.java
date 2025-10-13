@@ -11,17 +11,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.tv337.witchery2.util.ITickableBlockEntity;
 
-import java.lang.reflect.Array;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class witch_cauldron_be extends BlockEntity implements ITickableBlockEntity {
+public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity {
     protected static final Set<Block> HEAT_SOURCES = Set.of(Blocks.FIRE, Blocks.CAMPFIRE, Blocks.SOUL_FIRE, Blocks.SOUL_CAMPFIRE, Blocks.LAVA);
     private final List<ItemStack> brewingItems = new ArrayList<>(); // Stores tossed items
 
-    public witch_cauldron_be(BlockPos pPos, BlockState pBlockState) {
+    public WitchCauldronBe(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.WITCH_CAULDRON_BE.get(), pPos, pBlockState);
     }
     private boolean hasHeatSourceBelow() {
