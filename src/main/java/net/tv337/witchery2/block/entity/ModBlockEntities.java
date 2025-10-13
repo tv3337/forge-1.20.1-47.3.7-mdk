@@ -8,15 +8,15 @@ import net.minecraftforge.registries.RegistryObject;
 import net.tv337.witchery2.Witchery;
 import net.tv337.witchery2.block.ModBlocks;
 
-
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Witchery.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<witch_cauldron>> WITCH_CAULDRON =
-            BLOCK_ENTITIES.register("witch_cauldron", () ->
-                    BlockEntityType.Builder.of(witch_cauldron::new,
+    public static final RegistryObject<BlockEntityType<witch_cauldron_be>> WITCH_CAULDRON_BE =
+            BLOCK_ENTITIES.register("witch_cauldron_be", () ->
+                    BlockEntityType.Builder.of(witch_cauldron_be::new,
                             ModBlocks.WITCH_CAULDRON.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
