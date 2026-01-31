@@ -4,8 +4,8 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 
-public class gruesprey extends MobEffect {
-    public gruesprey(MobEffectCategory pCategory, int pColor) {
+public class GruesPrey extends MobEffect {
+    public GruesPrey(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);
     }
 
@@ -17,6 +17,7 @@ public class gruesprey extends MobEffect {
 
         super.applyEffectTick(pLivingEntity, pAmplifier);
     }
+
 
     @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
