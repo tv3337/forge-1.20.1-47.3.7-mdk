@@ -9,7 +9,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class witch_cauldron extends Block {
-    public static final VoxelShape SHAPE = Block.box(0, 0,0, 16, 16, 16);
+    public static final VoxelShape SHAPE = Block.box(1, 0,1, 15, 13, 15);
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
