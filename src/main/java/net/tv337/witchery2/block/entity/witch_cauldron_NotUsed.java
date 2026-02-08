@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class witch_cauldron extends BlockEntity implements MenuProvider {
-    public witch_cauldron(BlockPos pPos, BlockState pBlockState) {
+public class witch_cauldron_NotUsed extends BlockEntity implements MenuProvider {
+    public witch_cauldron_NotUsed(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.WITCH_CAULDRON.get(), pPos, pBlockState);
     }
 

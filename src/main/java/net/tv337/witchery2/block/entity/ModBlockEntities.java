@@ -12,9 +12,9 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Witchery.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<witch_cauldron>> WITCH_CAULDRON =
+    public static final RegistryObject<BlockEntityType<witch_cauldron_NotUsed>> WITCH_CAULDRON =
             BLOCK_ENTITIES.register("witch_cauldron", () ->
-                    BlockEntityType.Builder.of(witch_cauldron::new,
+                    BlockEntityType.Builder.of(witch_cauldron_NotUsed::new,
                             ModBlocks.WITCH_CAULDRON.get()).build(null));
 
     public static void register(IEventBus eventBus) {

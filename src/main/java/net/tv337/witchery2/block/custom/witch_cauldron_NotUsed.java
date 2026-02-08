@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class witch_cauldron extends Block {
+public class witch_cauldron_NotUsed extends Block {
     public static final VoxelShape SHAPE = Block.box(1, 0,1, 15, 13, 15);
 
     @Override
@@ -21,5 +21,5 @@ public class witch_cauldron extends Block {
     }
 
 
-    public witch_cauldron(Properties pProperties) {super(pProperties);}
+    public witch_cauldron_NotUsed(Properties pProperties) {super(pProperties);}
 }
