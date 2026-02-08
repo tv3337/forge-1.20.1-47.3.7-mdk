@@ -11,6 +11,6 @@ import net.tv337.witchery2.client.renderer.WitchCauldronRenderer;
 public class ModBlockEntityRenderers {
     @SubscribeEvent
     public static void registerRenders(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(ModBlockEntities.WITCH_CAULDRON_BE.get(), WitchCauldronRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.WITCH_CAULDRON.get(), ModBlockEntityRenderers::new);
     }
 }

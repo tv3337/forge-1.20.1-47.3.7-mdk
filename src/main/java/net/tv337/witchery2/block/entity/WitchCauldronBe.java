@@ -20,7 +20,7 @@ public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity
     private final List<ItemStack> brewingItems = new ArrayList<>(); // Stores tossed items
 
     public WitchCauldronBe(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.WITCH_CAULDRON_BE.get(), pPos, pBlockState);
+        super(ModBlockEntities.WITCH_CAULDRON.get(), pPos, pBlockState);
     }
     private boolean hasHeatSourceBelow() {
         BlockState stateBelow = level.getBlockState(worldPosition.below());

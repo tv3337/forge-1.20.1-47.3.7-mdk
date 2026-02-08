@@ -21,7 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.GRASSPER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/grassper")));
         simpleBlockWithItem(ModBlocks.WITCH_CAULDRON.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/witch_cauldron")));
+                new ModelFile.UncheckedModelFile(modLoc("block/witch_cauldron3")));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
