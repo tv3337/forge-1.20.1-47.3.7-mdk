@@ -1,10 +1,18 @@
 {
-  "type": "minecraft:smelting",
-  "category": "blocks",
-  "cookingtime": 200,
-  "experience": 0.1,
-  "ingredient": {
-    "item": "witchery2:raw_sapphire_block"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "witchery2:sapphire"
+    }
   },
-  "result": "witchery2:sapphire_block"
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "item": "witchery2:sapphire_block"
+  },
+  "show_notification": true
 }

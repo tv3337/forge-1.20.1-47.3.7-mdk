@@ -1,0 +1,19 @@
+{
+  "parent": "witchery2:block/witch_cauldron_base",
+  "textures": {
+    "water": "minecraft:block/water_still"
+  },
+  "elements": [
+    {
+      "from": [3, 7, 3],
+      "to":   [13, 8, 13],
+      "faces": {
+        "up":    { "texture": "#water" },
+        "north": { "texture": "#water" },
+        "south": { "texture": "#water" },
+        "east":  { "texture": "#water" },
+        "west":  { "texture": "#water" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "witchery2:block/witch_cauldron_base" }
+    },
+    {
+      "when": { "level": 3 },
+      "apply": { "model": "witchery2:block/witch_cauldron_water_level3" }
+    }
+  ]
+}

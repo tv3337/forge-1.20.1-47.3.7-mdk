@@ -6,6 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
@@ -16,6 +17,10 @@ import net.tv337.witchery2.block.entity.WitchCauldronBe;
 
 public class WitchCauldronRenderer implements BlockEntityRenderer<WitchCauldronBe> {
     public static final ResourceLocation WATER_STILL = new ResourceLocation("minecraft:block/water_still");
+
+    public WitchCauldronRenderer(BlockEntityRendererProvider.Context context) {
+        // THIS
+    }
 
     @Override
     public void render(WitchCauldronBe pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pLight, int pOverlay) {
