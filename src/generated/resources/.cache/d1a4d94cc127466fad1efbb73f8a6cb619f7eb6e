@@ -1,4 +1,5 @@
-// 1.20.1	2026-02-08T20:48:36.5215189	Tags for minecraft:block mod id witchery2
+// 1.20.1	2026-05-15T18:54:50.459704	Tags for minecraft:block mod id witchery2
 77d93a8f149dafbf770ed46e9f0dd02d8b2e081f data/minecraft/tags/blocks/mineable/pickaxe.json
 72ad6c5db1bc01552fce7d1ee8841b980792ae7e data/minecraft/tags/blocks/needs_diamond_tool.json
 ae950f15dda4065a05ffecdc312d5a5198756e3d data/minecraft/tags/blocks/needs_iron_tool.json
+6b9dda89289de24a1dd046c2ef57b15aa6688a51 data/witchery2/tags/blocks/cauldron_heat_sources.json

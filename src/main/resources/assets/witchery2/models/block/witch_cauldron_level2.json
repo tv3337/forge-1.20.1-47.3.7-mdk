@@ -7,8 +7,8 @@
   },
   "elements": [
     {
-      "from": [3, 7, 3],
-      "to": [13, 8, 13],
+      "from": [2, 7, 2],
+      "to": [14, 8, 14],
       "faces": {
         "up": { "texture": "#water", "tintindex": 0 },
         "down": { "texture": "#water", "tintindex": 0 }

@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -123,11 +124,31 @@ public class WitchCauldron extends Block implements EntityBlock {
         return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
+    //enables bubbling if placed above a heat source
+    @Override
+    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
+
+        if (!level.isClientSide) {
+
+            boolean heated = hasHeatSource(level, pos);
+
+            level.setBlock(
+                    pos,
+                    state.setValue(BUBBLING, heated),
+                    3
+            );
+        }
+
+        super.onPlace(state, level, pos, oldState, isMoving);
+    }
+
     //handles dealing with bucket filling and emptying
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
+
         ItemStack stack = player.getItemInHand(hand);
+
         if (stack.getItem() == Items.BUCKET) {
 
             int currentLevel = state.getValue(LEVEL);
@@ -240,5 +261,46 @@ public class WitchCauldron extends Block implements EntityBlock {
                 .is(net.tv337.witchery2.util.ModTags.Blocks.CAULDRON_HEAT_SOURCES);
     }
 
+    //animates bubbles if heated
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+
+        if (!state.getValue(BUBBLING)) {
+            return;
+        }
+
+        BlockEntity be = level.getBlockEntity(pos);
+
+        int color = 0x3F76E4;
+
+        if (be instanceof WitchCauldronBe cauldron) {
+            color = cauldron.getWaterColor();
+        }
+
+        float r = ((color >> 16) & 255) / 255.0F;
+        float g = ((color >> 8) & 255) / 255.0F;
+        float b = (color & 255) / 255.0F;
+
+        float jitter = 0.1F;
+
+        r += (random.nextFloat() - 0.5F) * jitter;
+        g += (random.nextFloat() - 0.5F) * jitter;
+        b += (random.nextFloat() - 0.5F) * jitter;
+
+        double x = pos.getX() + 0.5;
+        double y = pos.getY() + 0.8;
+        double z = pos.getZ() + 0.5;
+
+        for (int i = 0; i < 3; i++) {
+            double offsetX = (random.nextDouble() - 0.5) * 0.6;
+            double offsetZ = (random.nextDouble() - 0.5) * 0.6;
+            level.addParticle(net.minecraft.core.particles.ParticleTypes.ENTITY_EFFECT, x + offsetX, y,z + offsetZ, r,g,b);
+        }
+
+        if (random.nextInt(10) == 0) {
+            level.playLocalSound(x, y, z, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.BLOCKS,
+                    0.3F, 0.8F + random.nextFloat() * 0.4F, false);
+        }
+    }
 
 }
