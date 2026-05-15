@@ -1,6 +1,8 @@
 package net.tv337.witchery2.block.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
@@ -18,14 +20,17 @@ import java.util.List;
 public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity {
     protected static final Set<Block> HEAT_SOURCES = Set.of(Blocks.FIRE, Blocks.CAMPFIRE, Blocks.SOUL_FIRE, Blocks.SOUL_CAMPFIRE, Blocks.LAVA);
     private final List<ItemStack> brewingItems = new ArrayList<>(); // Stores tossed items
+    private int waterColor = 0x3F76E4;
 
     public WitchCauldronBe(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.WITCH_CAULDRON.get(), pPos, pBlockState);
     }
+
     private boolean hasHeatSourceBelow() {
         BlockState stateBelow = level.getBlockState(worldPosition.below());
         return HEAT_SOURCES.contains(stateBelow.getBlock());
     }
+
     public void tick() {
         if (level == null || level.isClientSide) return;
 
@@ -36,6 +41,7 @@ public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity
 
 
     }
+
     private void pickupItems() {
         BlockPos abovePos = this.worldPosition.above();
         List<ItemEntity> items = level.getEntitiesOfClass(ItemEntity.class, new AABB(abovePos));
@@ -49,4 +55,43 @@ public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity
 
     }
 
+    public int getWaterColor() {
+        return waterColor;
+    }
+
+    public void setWaterColor(int color) {
+        this.waterColor = color;
+        setChanged();
+
+        if (level != null && !level.isClientSide) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    @Override
+    protected void saveAdditional(CompoundTag tag) {
+        tag.putInt("WaterColor", waterColor);
+        super.saveAdditional(tag);
+    }
+
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        waterColor = tag.getInt("WaterColor");
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag) {
+        load(tag);
+    }
 }

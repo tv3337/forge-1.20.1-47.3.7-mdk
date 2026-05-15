@@ -1,8 +1,27 @@
 {
-  "variants": {
-    "level=0": { "model": "witchery2:block/witch_cauldron_empty" },
-    "level=1": { "model": "witchery2:block/witch_cauldron_level1" },
-    "level=2": { "model": "witchery2:block/witch_cauldron_level2" },
-    "level=3": { "model": "witchery2:block/witch_cauldron_level3" }
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "witchery2:block/witch_cauldron_base"
+      }
+    },
+    {
+      "when": { "level": "1" },
+      "apply": {
+        "model": "witchery2:block/witch_cauldron_level1"
+      }
+    },
+    {
+      "when": { "level": "2" },
+      "apply": {
+        "model": "witchery2:block/witch_cauldron_level2"
+      }
+    },
+    {
+      "when": { "level": "3" },
+      "apply": {
+        "model": "witchery2:block/witch_cauldron_level3"
+      }
+    }
+  ]
 }

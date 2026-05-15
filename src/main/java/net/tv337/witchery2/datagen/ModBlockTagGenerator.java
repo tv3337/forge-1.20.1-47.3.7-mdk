@@ -3,10 +3,12 @@ package net.tv337.witchery2.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tv337.witchery2.Witchery;
 import net.tv337.witchery2.block.ModBlocks;
+import net.tv337.witchery2.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -29,5 +31,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_BLOCK.get(),
                         ModBlocks.RAW_SAPPHIRE_BLOCK.get()
                         );
+
+        tag(ModTags.Blocks.CAULDRON_HEAT_SOURCES)
+                .add(
+                        Blocks.FIRE,
+                        Blocks.CAMPFIRE,
+                        Blocks.SOUL_CAMPFIRE,
+                        Blocks.MAGMA_BLOCK,
+                        Blocks.LAVA
+                );
     }
 }

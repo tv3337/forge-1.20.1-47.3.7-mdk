@@ -1,5 +1,6 @@
 package net.tv337.witchery2.client;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,7 +23,13 @@ public class ModClientSetup {
 
         ItemBlockRenderTypes.setRenderLayer(
                 ModBlocks.WITCH_CAULDRON.get(),
-                RenderType.translucent()
+                RenderType.cutout()
         );
+        event.enqueueWork(() -> {
+            Minecraft.getInstance().getBlockColors().register(
+                    (state, level, pos, tintIndex) -> 0x3F76E4,
+                    ModBlocks.WITCH_CAULDRON.get()
+            );
+        });
     }
 }
