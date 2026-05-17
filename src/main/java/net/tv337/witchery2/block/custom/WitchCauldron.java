@@ -2,6 +2,7 @@ package net.tv337.witchery2.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -281,11 +282,7 @@ public class WitchCauldron extends Block implements EntityBlock {
         float g = ((color >> 8) & 255) / 255.0F;
         float b = (color & 255) / 255.0F;
 
-        float jitter = 0.1F;
 
-        r += (random.nextFloat() - 0.5F) * jitter;
-        g += (random.nextFloat() - 0.5F) * jitter;
-        b += (random.nextFloat() - 0.5F) * jitter;
 
         double x = pos.getX() + 0.5;
         double y = pos.getY() + 0.8;
@@ -294,7 +291,7 @@ public class WitchCauldron extends Block implements EntityBlock {
         for (int i = 0; i < 3; i++) {
             double offsetX = (random.nextDouble() - 0.5) * 0.6;
             double offsetZ = (random.nextDouble() - 0.5) * 0.6;
-            level.addParticle(net.minecraft.core.particles.ParticleTypes.ENTITY_EFFECT, x + offsetX, y,z + offsetZ, r,g,b);
+            level.addParticle(ParticleTypes.BUBBLE, x + offsetX, y,z + offsetZ, r,g,b);
         }
 
         if (random.nextInt(10) == 0) {
