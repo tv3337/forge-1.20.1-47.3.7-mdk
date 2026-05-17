@@ -272,7 +272,7 @@ public class WitchCauldron extends Block implements EntityBlock {
 
         BlockEntity be = level.getBlockEntity(pos);
 
-        int color = 0x3F76E4;
+        int color = 0xff0000;
 
         if (be instanceof WitchCauldronBe cauldron) {
             color = cauldron.getWaterColor();
@@ -285,13 +285,13 @@ public class WitchCauldron extends Block implements EntityBlock {
 
 
         double x = pos.getX() + 0.5;
-        double y = pos.getY() + 0.8;
+        double y = pos.getY() + 0.7;
         double z = pos.getZ() + 0.5;
 
         for (int i = 0; i < 3; i++) {
             double offsetX = (random.nextDouble() - 0.5) * 0.6;
             double offsetZ = (random.nextDouble() - 0.5) * 0.6;
-            level.addParticle(ParticleTypes.BUBBLE, x + offsetX, y,z + offsetZ, r,g,b);
+            level.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, x + offsetX, y,z + offsetZ, r,g,b);
         }
 
         if (random.nextInt(10) == 0) {
