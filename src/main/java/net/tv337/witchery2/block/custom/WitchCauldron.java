@@ -287,16 +287,17 @@ public class WitchCauldron extends Block implements EntityBlock {
         double x = pos.getX() + 0.5;
         double y = pos.getY() + 0.7;
         double z = pos.getZ() + 0.5;
+        if (state.getValue(BUBBLING) && state.getValue(LEVEL) == 3) {
+            for (int i = 0; i < 3; i++) {
+                double offsetX = (random.nextDouble() - 0.5) * 0.6;
+                double offsetZ = (random.nextDouble() - 0.5) * 0.6;
+                level.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, x + offsetX, y, z + offsetZ, r, g, b);
+            }
 
-        for (int i = 0; i < 3; i++) {
-            double offsetX = (random.nextDouble() - 0.5) * 0.6;
-            double offsetZ = (random.nextDouble() - 0.5) * 0.6;
-            level.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, x + offsetX, y,z + offsetZ, r,g,b);
-        }
-
-        if (random.nextInt(10) == 0) {
-            level.playLocalSound(x, y, z, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.BLOCKS,
-                    0.3F, 0.8F + random.nextFloat() * 0.4F, false);
+            if (random.nextInt(10) == 0) {
+                level.playLocalSound(x, y, z, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.BLOCKS,
+                        0.3F, 0.8F + random.nextFloat() * 0.4F, false);
+            }
         }
     }
 

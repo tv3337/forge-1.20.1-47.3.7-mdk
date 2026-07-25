@@ -37,23 +37,9 @@ public class WitchCauldronBe extends BlockEntity implements ITickableBlockEntity
         boolean hasHeatSource = this.hasHeatSourceBelow();
         if (!hasHeatSource) return;
 
-        this.pickupItems();
-
-
     }
 
-    private void pickupItems() {
-        BlockPos abovePos = this.worldPosition.above();
-        List<ItemEntity> items = level.getEntitiesOfClass(ItemEntity.class, new AABB(abovePos));
-        for (ItemEntity itemEntity : items) {
-            ItemStack stack = itemEntity.getItem();
-            if (!stack.isEmpty()) {
-                brewingItems.add(stack.copy());
-                itemEntity.remove(Entity.RemovalReason.KILLED);
-            }
-        }
 
-    }
 
     public int getWaterColor() {
         return waterColor;

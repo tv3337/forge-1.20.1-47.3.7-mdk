@@ -38,7 +38,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         Blocks.CAMPFIRE,
                         Blocks.SOUL_CAMPFIRE,
                         Blocks.MAGMA_BLOCK,
-                        Blocks.LAVA
+                        Blocks.LAVA,
+                        Blocks.SOUL_FIRE
                 );
     }
 }
